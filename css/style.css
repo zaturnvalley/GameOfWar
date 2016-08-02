@@ -3,3 +3,72 @@ body{
   font-family: "Futura";
   text-align:center;
 }
+.card{
+  width:200px;
+  height:286px;
+  margin: 0 auto;
+}
+.cardback{
+  background-image: url('../img/cardback.jpg');
+  background-size: cover;
+  margin: 0 auto;
+}
+#infoBox{
+  top:30px;
+}
+.2{
+  background-image: url('../img/2.png');
+  background-size: cover;
+}
+.3{
+  background-image: url('../img/3.png');
+  background-size: cover;
+}
+.4{
+  background-image: url('../img/4.png');
+  background-size: cover;
+}
+.5{
+  background-image: url('../img/5.png');
+  background-size: cover; 
+}
+.6{
+  background-image: url('../img/6.png');
+  background-size: cover;
+}
+.7{
+  background-image: url('../img/7.png');
+  background-size: cover; 
+}
+.8{
+  background-image: url('../img/8.png');
+  background-size: cover;
+}
+.9{
+  background-image: url('../img/9.png');
+  background-size: cover;
+}
+.10{
+  background-image: url('../img/10.png');
+  background-size: cover;
+}
+.11{
+  background-image: url('../img/11.png');
+  background-size: cover;
+}
+.12{
+  background-image: url('../img/12.png');
+  background-size: cover;
+}
+.13{
+  background-image: url('../img/13.png');
+  background-size: cover;
+}
+.14{
+  background-image: url('../img/14.png');
+  background-size: cover;
+}
+.15{
+  background-image: url('../img/15.png');
+  background-size: cover;
+}

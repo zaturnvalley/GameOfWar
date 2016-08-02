@@ -2,13 +2,48 @@
 <html>
 <head>
   <title>The Game of War</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<h1>The Game of War</h1>
+<div class="container-fluid">
+  <h1>The Game of War</h1>
+    <div class="row">
+      <div class="col-md-1">
+      </div>
 
-<input type="button" text="shuffle">
+      <div class="col-md-4" id="player1">
+        <div class="card cardback">
+        </div>
+      </div>
 
+      <div class="col-md-2">
+        <p id="#infoBox">Do you think you can win?</p>
+      </div>
+
+      <div class="col-md-4" id="player2">
+        <div class="card cardback">
+        </div>
+      </div>
+
+    </div>
+  <br>
+  <div class="row">
+    <button id="shuffle" class="btn btn-success" type="button">Shuffle &amp; Deal</button>
+    <button id="reset" class="btn btn-danger" type="button">RESET WHOLE GAME</button>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/code.js"></script>
 </body>
 </html>
