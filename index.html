@@ -18,20 +18,23 @@
 <body>
 <div class="container-fluid">
   <h1>The Game of War</h1>
-    <div class="row">
-      <div class="col-md-1">
-      </div>
+    <p id="infoBox">Do you think you can win?</p>
 
-      <div class="col-md-4" id="player1">
+    <div class="row">
+      <div class="col-md-2" id="player1">
         <div class="card cardback">
         </div>
       </div>
-
       <div class="col-md-2">
-        <p id="#infoBox">Do you think you can win?</p>
+        <div id="p1InPlayCard">
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div id="p2InPlayCard">
+        </div>
       </div>
 
-      <div class="col-md-4" id="player2">
+      <div class="col-md-2" id="player2">
         <div class="card cardback">
         </div>
       </div>
@@ -40,7 +43,6 @@
   <br>
   <div class="row">
     <button id="shuffle" class="btn btn-success" type="button">Shuffle &amp; Deal</button>
-    <button id="reset" class="btn btn-danger" type="button">RESET WHOLE GAME</button>
   </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

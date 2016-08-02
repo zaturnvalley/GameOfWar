@@ -16,6 +16,15 @@ body{
 #infoBox{
   top:30px;
 }
+#p1InPlayCard, #p2InPlayCard{
+  border: 1px solid black;
+  width: 200px;
+  height: 286px;
+  margin:0 auto;
+}
+.row{
+  margin: 0 auto;
+}
 .2{
   background-image: url('../img/2.png');
   background-size: cover;
