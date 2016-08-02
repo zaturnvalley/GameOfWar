@@ -33,6 +33,10 @@ $('#shuffle').click(function(){
   deal();
   $('#shuffle').html('Re-Shuffle');
   $('#player1').bind('click', clicker);
+  $('#p1ReaderBoard').html('Player 1 Cards In Deck: ' + player1.length);
+  $('#p2ReaderBoard').html('Player 2 Cards In Deck: ' + player2.length);
+  $('#p1InPlayCard').removeClass();
+  $('#p2InPlayCard').removeClass();
 });
 //turn function, checks winning scenario, calls round
 var clicker = function(){
@@ -63,20 +67,31 @@ function round(){
     bounty.push(p2Play);
   displayCard(p1Play, p2Play);
   if(p1Play > p2Play){
-    player1.concat(bounty);
+    player1 = player1.concat(bounty);
     bounty = [];
     $('#infoBox').html('Player 1 Takes');
+    $('#p1ReaderBoard').html('Player 1 Cards In Deck: ' + player1.length);
+    $('#p2ReaderBoard').html('Player 2 Cards In Deck: ' + player2.length);
     console.log('p1');
   } else if (p1Play < p2Play){
-    player2.concat(bounty);
+    player2 = player2.concat(bounty);
     bounty = [];
     $('#infoBox').html('Player 2 Takes');
+    $('#p1ReaderBoard').html('Player 1 Cards In Deck: ' + player1.length);
+    $('#p2ReaderBoard').html('Player 2 Cards In Deck: ' + player2.length);
     console.log('p2');
   } else {
-    $('#infoBox').html('War has begun');
-    war();
+    $('#player1').unbind('click', clicker);
+    $('#infoBox').html('<button id="warButton" class="btn btn-danger" type="button">WAR! Click to goto WAR!</button>');
+    $('#warButton').bind('click', warClick);
   }
 }
+//button only appears if war, runs war function, deletes button
+var warClick = function(){
+  war();
+  $('#infoBox').remove('button');
+  $('#player1').bind('click', clicker);
+};
 //if cards are tied, war is invoked, calls round
 function war(){
   console.log('warring');
@@ -103,7 +118,7 @@ function declareWinner(playerThatWon){
 //switches classes to display card
 function displayCard(cardNum1, cardNum2){
   $('#p1InPlayCard').removeClass();
-  $('#p1InPlayCard').addClass("." + cardNum1);
+  $('#p1InPlayCard').addClass("c" + cardNum1);
   $('#p2InPlayCard').removeClass();
-  $('#p2InPlayCard').addClass("." + cardNum2);
+  $('#p2InPlayCard').addClass("c" + cardNum2);
 }

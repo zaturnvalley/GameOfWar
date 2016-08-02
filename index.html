@@ -13,28 +13,37 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+  <!-- Jquery UI -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <div class="container-fluid">
   <h1>The Game of War</h1>
-    <p id="infoBox">Do you think you can win?</p>
+    <p id="infoBox">Click Shuffle to begin, then your deck to play a card.</p>
 
     <div class="row">
-      <div class="col-md-2" id="player1">
+      <div class="col-md-2 col-md-offset-2" id="player1">
+        <p>Click Deck to Play</p>
         <div class="card cardback">
         </div>
       </div>
       <div class="col-md-2">
+        <p>Your Card</p>
         <div id="p1InPlayCard">
         </div>
       </div>
       <div class="col-md-2">
+        <p>Computer's Card</p>
         <div id="p2InPlayCard">
         </div>
       </div>
 
       <div class="col-md-2" id="player2">
+        <p>Computer's Deck</p>
         <div class="card cardback">
         </div>
       </div>
@@ -44,8 +53,15 @@
   <div class="row">
     <button id="shuffle" class="btn btn-success" type="button">Shuffle &amp; Deal</button>
   </div>
+  <div class="row">
+    <div id="p1ReaderBoard" class="col-md-2 col-md-offset-2">
+      <p>Player 1: Cards In Deck</p>
+    </div>
+    <div id="p2ReaderBoard" class="col-md-2 col-md-offset-4">
+      <p>Player 2: Cards In Deck</p>
+    </div>
+  </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/code.js"></script>
 </body>
 </html>

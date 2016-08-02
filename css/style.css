@@ -4,9 +4,11 @@ body{
   text-align:center;
 }
 .card{
+  border: 1px solid black;
   width:200px;
   height:286px;
   margin: 0 auto;
+  border-radius:8%;
 }
 .cardback{
   background-image: url('../img/cardback.jpg');
@@ -18,66 +20,90 @@ body{
 }
 #p1InPlayCard, #p2InPlayCard{
   border: 1px solid black;
-  width: 200px;
-  height: 286px;
   margin:0 auto;
+  width:200px;
+  height:286px;
+  border-radius:8%;
 }
 .row{
   margin: 0 auto;
+  text-align:center;
 }
-.2{
-  background-image: url('../img/2.png');
+.c2{
+  background-image: url('../img/royal/2.jpg');
   background-size: cover;
 }
-.3{
-  background-image: url('../img/3.png');
+.c3{
+  background-image: url('../img/royal/3.jpg');
   background-size: cover;
 }
-.4{
-  background-image: url('../img/4.png');
+.c4{
+  background-image: url('../img/royal/4.jpg');
   background-size: cover;
 }
-.5{
-  background-image: url('../img/5.png');
+.c5{
+  background-image: url('../img/royal/5.jpg');
   background-size: cover; 
 }
-.6{
-  background-image: url('../img/6.png');
+.c6{
+  background-image: url('../img/royal/6.jpg');
   background-size: cover;
 }
-.7{
-  background-image: url('../img/7.png');
+.c7{
+  background-image: url('../img/royal/7.jpg');
   background-size: cover; 
 }
-.8{
-  background-image: url('../img/8.png');
+.c8{
+  background-image: url('../img/royal/8.jpg');
   background-size: cover;
 }
-.9{
-  background-image: url('../img/9.png');
+.c9{
+  background-image: url('../img/royal/9.jpg');
   background-size: cover;
 }
-.10{
-  background-image: url('../img/10.png');
+.c10{
+  background-image: url('../img/royal/10.jpg');
   background-size: cover;
 }
-.11{
-  background-image: url('../img/11.png');
+.c11{
+  background-image: url('../img/royal/11.jpg');
   background-size: cover;
 }
-.12{
-  background-image: url('../img/12.png');
+.c12{
+  background-image: url('../img/royal/12.jpg');
   background-size: cover;
 }
-.13{
-  background-image: url('../img/13.png');
+.c13{
+  background-image: url('../img/royal/13.jpg');
   background-size: cover;
 }
-.14{
-  background-image: url('../img/14.png');
+.c14{
+  background-image: url('../img/royal/14.jpg');
   background-size: cover;
 }
-.15{
-  background-image: url('../img/15.png');
+.c15{
+  background-image: url('../img/royal/15.jpg');
   background-size: cover;
 }
+@media(max-width:1230px){
+  .card {
+    width:150px;
+    height:214.5px;
+    margin: 0 auto;
+  }
+  #p1InPlayCard, #p2InPlayCard{
+    width:150px;
+    height:214.5px;
+    margin: 0 auto;
+  }
+@media(max-width:1000px){
+  .card {
+    width:100px;
+    height:143px;
+    margin: 0 auto;
+  }
+  #p1InPlayCard, #p2InPlayCard{
+    width:150px;
+    height:214.5px;
+    margin: 0 auto;
+  }
