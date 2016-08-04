@@ -196,7 +196,7 @@ $(document).ready(function() {
     var messy = (Math.floor(Math.random()*100));
     for (var j = 0; j <=4; j++) {
       for (var i = 2; i< 14; i++){
-        var scatterCard = $('<div class="card clickToDelete c' + i + '" style="display:inline-block; z-index:1; position: absolute; left:' + (Math.floor(Math.random()*1000)) + 'px; top:' + (Math.floor(Math.random()*1000)) + 'px; transform:rotate(' + (Math.floor(Math.random()*360)) + 'deg)"></div>');
+        var scatterCard = $('<div class="card clickToDelete c' + i + '" style="display:inline-block; z-index:102; position: absolute; left:' + (Math.floor(Math.random()*1000)) + 'px; top:' + (Math.floor(Math.random()*1000)) + 'px; transform:rotate(' + (Math.floor(Math.random()*360)) + 'deg)"></div>');
         scatterCard.bind('click', destroySelf);
         $('.container-fluid').append(scatterCard);
       }
