@@ -2,6 +2,19 @@ body{
   color:black;
   font-family: "Futura";
   text-align:center;
+  background-color: #F2E9D8;
+}
+h1{
+  margin:0 auto;
+  top:10px;
+}
+#underline{
+  height:20px;
+  width:400px;
+}
+#infoBox{
+  margin:10px;
+  margin:0 auto;
 }
 .card{
   border: 1px solid black;
@@ -9,25 +22,76 @@ body{
   height:286px;
   margin: 0 auto;
   border-radius:8%;
+  perspective: 1000px;
+}
+.cardSmall{
+  border: 1px solid black;
+  width:100px;
+  height:143px;
+  margin: 0 auto;
+  border-radius:8%;
+}
+#war-row{
+  margin:0 auto;
 }
 .cardback{
   background-image: url('../img/cardback.jpg');
   background-size: cover;
   margin: 0 auto;
+  z-index: 2;
+  transform: rotateY(0deg);
 }
-#infoBox{
-  top:30px;
+.card:hover .flipper, .card.hover .flipper{
+    transform: rotateY(180deg);
 }
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+/*  position: relative;*/
+}
+.card, .front, .cardback {
+  backface-visibility: hidden;
+/*  position: absolute;
+  top: 0;
+  left: 0;*/
+}
+.front {
+  transform: rotateY(180deg);
+}
+
 #p1InPlayCard, #p2InPlayCard{
   border: 1px solid black;
   margin:0 auto;
   width:200px;
   height:286px;
   border-radius:8%;
+  background-color:white;
 }
 .row{
   margin: 0 auto;
   text-align:center;
+}
+#arrow{
+  width:100px;
+  height:35px;
+  margin:10px 0 0 0;
+}
+.signForArrow{
+  margin:50px 0 0 0;
+}
+.yours{
+    background-image: url('../img/cardback.jpg');
+    width:200px;
+    height:286px;
+    border:1px solid black;
+    background-size: cover;
+}
+.theirs{
+    background-image: url('../img/cardback.jpg');
+    width:200px;
+    height:286px;
+    border:1px solid black;
+    background-size: cover;
 }
 .c2{
   background-image: url('../img/royal/2.jpg');
@@ -85,6 +149,26 @@ body{
   background-image: url('../img/royal/15.jpg');
   background-size: cover;
 }
+.player1Text{
+    background-color: #549587;
+    color:white;
+    border-radius:2%;
+    width:270px;
+    margin: 0 auto;
+    height:21px;
+    font-size:14px;
+    font-weight: 100;
+}
+.player2Text{
+    background-color: #2A3491;
+    color:white;
+    border-radius:2%;
+    width:270px;
+    margin: 0 auto;
+    height:21px;
+    font-size:14px;
+    font-weight: 100;
+}
 @media(max-width:1230px){
   .card {
     width:150px;
@@ -96,6 +180,11 @@ body{
     height:214.5px;
     margin: 0 auto;
   }
+  #info1, #info2{
+    width:150px;
+    height:214.5px;
+    margin: 0 auto;
+  }
 @media(max-width:1000px){
   .card {
     width:100px;
@@ -103,7 +192,29 @@ body{
     margin: 0 auto;
   }
   #p1InPlayCard, #p2InPlayCard{
+    width:100px;
+    height:143px;
+    margin: 0 auto;
+  }
+  #info1, #info2{
     width:150px;
     height:214.5px;
     margin: 0 auto;
   }
+@media(max-width:700px){
+  .card {
+    width:80px;
+    height:114.4px;
+    margin: 0 auto;
+  }
+  #p1InPlayCard, #p2InPlayCard{
+    width:80px;
+    height:114.4px;
+    margin: 0 auto;
+  }
+  #info1, #info2{
+    width:150px;
+    height:214.5px;
+    margin: 0 auto;
+  }
+}

@@ -23,44 +23,53 @@
 <body>
 <div class="container-fluid">
   <h1>The Game of War</h1>
-    <p id="infoBox">Click Shuffle to begin, then your deck to play a card.</p>
-
+      <img id="underline" src="img/underline.png" alt="arrow">
     <div class="row">
-      <div class="col-md-2 col-md-offset-2" id="player1">
-        <p>Click Deck to Play</p>
+      <p id="infoBox">Click Shuffle to begin, then your deck to play a card.</p>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-2" id="info1">
+        <p class="signForArrow">Click Deck to Play</p>
+          <img id="arrow" src="img/arrow.png" alt="arrow">
+      </div>
+
+      <div class="col-md-2" id="player1">
         <div class="card cardback">
         </div>
       </div>
+
       <div class="col-md-2">
-        <p>Your Card</p>
         <div id="p1InPlayCard">
         </div>
       </div>
       <div class="col-md-2">
-        <p>Computer's Card</p>
         <div id="p2InPlayCard">
         </div>
       </div>
 
       <div class="col-md-2" id="player2">
-        <p>Computer's Deck</p>
         <div class="card cardback">
         </div>
+       </div>
+      <div class="col-md-2" id="info2">
+        <p class="signForArrow">Computer's Deck</p>
+          <img id="arrow" src="img/arrow2.png" alt="arrow">
       </div>
-
     </div>
   <br>
   <div class="row">
-    <button id="shuffle" class="btn btn-success" type="button">Shuffle &amp; Deal</button>
-  </div>
-  <div class="row">
-    <div id="p1ReaderBoard" class="col-md-2 col-md-offset-2">
+    <div class="col-md-2 col-md-offset-2" id="p1ReaderBoard">
       <p>Player 1: Cards In Deck</p>
     </div>
-    <div id="p2ReaderBoard" class="col-md-2 col-md-offset-4">
+    <div class="col-md-2 col-md-offset-4" id="p2ReaderBoard">
       <p>Player 2: Cards In Deck</p>
     </div>
   </div>
+<br>
+  <div id="war-container" class="container">
+  </div>
+  <button id="shuffle" class="btn btn-success" type="button">Shuffle &amp; Deal</button>
 </div>
 <script type="text/javascript" src="js/code.js"></script>
 </body>
