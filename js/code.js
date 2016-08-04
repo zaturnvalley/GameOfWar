@@ -103,10 +103,12 @@ $(document).ready(function() {
   function winnerScenario(){
     if(player1.length === 54){
       declareWinner("Player 1");
+      $('#war-container').html('');
       return;
     }
     if(player2.length === 54){
       declareWinner("Player 2");
+      $('#war-container').html('');
       return;
     }
   }
@@ -119,10 +121,12 @@ $(document).ready(function() {
   function war(){
     if (player1.length < WAR_BOUNTY){
       declareWinner("Player 2");
+      $('#war-container').html('');
       return;
     }
     if (player2.length < WAR_BOUNTY){
       declareWinner("Player 1");
+      $('#war-container').html('');
       return;
     }
     for (var i = 0; i < WAR_BOUNTY; i++){
