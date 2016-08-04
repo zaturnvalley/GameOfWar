@@ -7,7 +7,6 @@ $(document).ready(function() {
   var p1Play;
   var p2Play;
   var WAR_BOUNTY = 3;
-
   //shuffles the cards
   function shuffle(){
     player1 = [];
@@ -25,7 +24,6 @@ $(document).ready(function() {
     console.log('dealing p1 ',player1)
     console.log('dealing p2 ', player2)
   }
-
   //invokes deal and shuffle on button click
   $('#shuffle').click(function(){
     console.log('clicked');
@@ -43,7 +41,6 @@ $(document).ready(function() {
     //Winner scenario
     winnerScenario();
     round($('#p1InPlayCard')[0], $('#p2InPlayCard')[0]);
-
   };
   //activates each round
   function round(yours, theirs, yourBounty, theirBounty){
@@ -65,6 +62,22 @@ $(document).ready(function() {
     }
     p1Play = player1.shift();
     p2Play = player2.shift();
+    if(p1Play % 7 === 0 || p2Play % 13 === 0){
+      $('.flipContainer').remove();
+      $('.flipContainer2').remove();
+    }
+    var flipContainer = $('<div style=" position:absolute; top:0;" class="flipContainer cardback card"></div>');
+    var newCard = $('<div style="position: absolute; top:0" class="card back c' + p1Play + '"></div>');
+    $('.flipContainer').append(newCard);
+    $('.flipContainer').css({"transform": "rotateY(180deg) translate(-197px, 0px)", "transition": "0.6s", "transform-style": "preserve-3d"});
+    $('.flipContainer').addClass('c' + p1Play);
+    $('#player1').append(flipContainer);
+    var flipContainer2 = $('<div style=" position:absolute; top:0;" class="flipContainer2 cardback card"></div>');
+    var newCard2 = $('<div style="position: absolute; top:0" class="card back c' + p2Play + '"></div>');
+    $('.flipContainer2').append(newCard2);
+    $('.flipContainer2').css({"transform": "rotateY(-180deg) translate(200px, 0px)", "transition": "0.6s", "transform-style": "preserve-3d"});
+    $('.flipContainer2').addClass('c' + p2Play);
+    $('#player2').append(flipContainer2);
     bounty.push(p1Play);
     bounty.push(p2Play);
     return false;
@@ -77,25 +90,19 @@ $(document).ready(function() {
       $('#p1ReaderBoard').html('Player 1 Cards In  Pile: ' + player1.length);
       $('#p2ReaderBoard').html('Player 2 Cards In Pile: ' + player2.length);
       $('#infoBox').html('Player 1 Wins Round & Takes Card').removeClass('player2Text').addClass('player1Text');
-      // if(!($('#war-container').is(':empty'))){
-      //   setTimeout(clearWarCards, 5000);
-      // }
-      console.log('p1');
+      console.log('p1 wins round');
     } else if (p1Play < p2Play){
       player2 = player2.concat(bounty);
       bounty = [];
       $('#p1ReaderBoard').html('Player 1 Cards In Pile: ' + player1.length);
       $('#p2ReaderBoard').html('Player 2 Cards In Pile: ' + player2.length);
       $('#infoBox').html('Player 2 Wins Round & Takes Card').removeClass('player1Text').addClass('player2Text');
-      // if(!($('#war-container').is(':empty'))){
-      //   setTimeout(clearWarCards, 5000);
-      // }
-      console.log('p2');
+      console.log('p2 wins round');
     } else {
       $('#infoBox').removeClass('player1Text');
       $('#infoBox').removeClass('player2Text');
       $('#player1').unbind('click', clicker);
-      $('#infoBox').html('<button id="warButton" class="btn btn-danger" type="button">WAR! Click to goto WAR!</button>');
+      $('#infoBox').html('<button id="warButton" class="btn btn-danger" style="font-family: \'Futura\'; height:21px; padding: 1px; font-weight:100; font-size: 10px" type="button">WAR! Click to goto WAR!</button>');
       $('#warButton').bind('click', warClick);
     }
   }
@@ -139,7 +146,7 @@ $(document).ready(function() {
     newButton.bind('click', clearWarCards);
     $('#war-container').append(newButton);
   }
-  //Declare winner
+  //declare winners
   function declareWinner(playerThatWon){
     $('#player1').unbind('click', clicker);
     console.log(playerThatWon + " is the Winner!");
@@ -184,6 +191,7 @@ $(document).ready(function() {
     $('#war-container').html('');
     $('#player1').bind('click', clicker);
   }
+  //function scatters 52 random cards in container div
   $("#scatter").click(function(){
     var messy = (Math.floor(Math.random()*100));
     for (var j = 0; j <=4; j++) {
@@ -194,6 +202,7 @@ $(document).ready(function() {
       }
     }
   });
+  //function deletes 52 scatter cards on click
   var destroySelf = function(){
     console.log('I exist');
     this.remove();

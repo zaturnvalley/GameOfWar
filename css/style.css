@@ -1,14 +1,14 @@
 body{
   color:black;
-  font-family: "Futura";
+  font-family: "Bad Script", "Futura";
   text-align:center;
   background-color: #F2E9D8;
 }
 h1{
   margin:0 auto;
-  top:10px;
 }
 .container-fluid{
+  top:20px;
   position:absolute;
   z-index: 0;
 }
@@ -50,24 +50,15 @@ h1{
   z-index: 2;
   transform: rotateY(0deg);
 }
-.card:hover .flipper, .card.hover .flipper{
-    transform: rotateY(180deg);
-}
-.flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-/*  position: relative;*/
-}
-.card, .front, .cardback {
-  backface-visibility: hidden;
-/*  position: absolute;
-  top: 0;
-  left: 0;*/
-}
-.front {
+.back{
   transform: rotateY(180deg);
 }
-
+.cardback, .back {
+  backface-visibility: hidden;
+}
+#player1{
+  position:relative;
+}
 #p1InPlayCard, #p2InPlayCard{
   border: 1px solid black;
   margin:0 auto;
@@ -75,6 +66,20 @@ h1{
   height:286px;
   border-radius:8%;
   background-color:white;
+}
+.flipContainer{
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top:0;
+  z-index: 101;
+}
+.flipContainer2{
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top:0;
+  z-index: 101;
 }
 .row{
   margin: 0 auto;
@@ -160,6 +165,7 @@ h1{
 }
 .player1Text{
     background-color: #549587;
+    font-family: "Futura";
     color:white;
     border-radius:2%;
     width:270px;
@@ -170,6 +176,7 @@ h1{
 }
 .player2Text{
     background-color: #2A3491;
+    font-family: "Futura";
     color:white;
     border-radius:2%;
     width:270px;
