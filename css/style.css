@@ -4,12 +4,18 @@ body{
   text-align:center;
   background-color: #F2E9D8;
 }
-.container-fluid{
-  z-index: 0;
-}
 h1{
   margin:0 auto;
   top:10px;
+}
+.container-fluid{
+  position:absolute;
+  z-index: 0;
+}
+.spillContainer{
+  position:absolute;
+  height: 1000px;
+  width: 1000px;
 }
 #underline{
   height:20px;
@@ -41,14 +47,27 @@ h1{
   background-image: url('../img/cardback.jpg');
   background-size: cover;
   margin: 0 auto;
-/*  z-index: 2;
-  transform: rotateY(0deg);*/
+  z-index: 2;
+  transform: rotateY(0deg);
 }
-/*.cardback:hover{
-  background-image: url('../img/2.jpg');
-  background-size:cover;
-  margin: 0 auto;
-}*/
+.card:hover .flipper, .card.hover .flipper{
+    transform: rotateY(180deg);
+}
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+/*  position: relative;*/
+}
+.card, .front, .cardback {
+  backface-visibility: hidden;
+/*  position: absolute;
+  top: 0;
+  left: 0;*/
+}
+.front {
+  transform: rotateY(180deg);
+}
+
 #p1InPlayCard, #p2InPlayCard{
   border: 1px solid black;
   margin:0 auto;
