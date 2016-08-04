@@ -4,6 +4,9 @@ body{
   text-align:center;
   background-color: #F2E9D8;
 }
+.container-fluid{
+  z-index: 0;
+}
 h1{
   margin:0 auto;
   top:10px;
@@ -38,27 +41,14 @@ h1{
   background-image: url('../img/cardback.jpg');
   background-size: cover;
   margin: 0 auto;
-  z-index: 2;
-  transform: rotateY(0deg);
+/*  z-index: 2;
+  transform: rotateY(0deg);*/
 }
-.card:hover .flipper, .card.hover .flipper{
-    transform: rotateY(180deg);
-}
-.flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-/*  position: relative;*/
-}
-.card, .front, .cardback {
-  backface-visibility: hidden;
-/*  position: absolute;
-  top: 0;
-  left: 0;*/
-}
-.front {
-  transform: rotateY(180deg);
-}
-
+/*.cardback:hover{
+  background-image: url('../img/2.jpg');
+  background-size:cover;
+  margin: 0 auto;
+}*/
 #p1InPlayCard, #p2InPlayCard{
   border: 1px solid black;
   margin:0 auto;
@@ -94,7 +84,7 @@ h1{
     background-size: cover;
 }
 .c2{
-  background-image: url('../img/royal/2.jpg');
+  background-image: url('../img/royal/2d.jpg');
   background-size: cover;
 }
 .c3{
@@ -102,7 +92,7 @@ h1{
   background-size: cover;
 }
 .c4{
-  background-image: url('../img/royal/4.jpg');
+  background-image: url('../img/royal/4h.jpg');
   background-size: cover;
 }
 .c5{
@@ -118,15 +108,15 @@ h1{
   background-size: cover; 
 }
 .c8{
-  background-image: url('../img/royal/8.jpg');
+  background-image: url('../img/royal/8c.jpg');
   background-size: cover;
 }
 .c9{
-  background-image: url('../img/royal/9.jpg');
+  background-image: url('../img/royal/9c.jpg');
   background-size: cover;
 }
 .c10{
-  background-image: url('../img/royal/10.jpg');
+  background-image: url('../img/royal/10d.jpg');
   background-size: cover;
 }
 .c11{
@@ -134,7 +124,7 @@ h1{
   background-size: cover;
 }
 .c12{
-  background-image: url('../img/royal/12.jpg');
+  background-image: url('../img/royal/12h.jpg');
   background-size: cover;
 }
 .c13{

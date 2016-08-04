@@ -184,4 +184,19 @@ $(document).ready(function() {
     $('#war-container').html('');
     $('#player1').bind('click', clicker);
   }
+  //spills cards
+  $("#spill").click(function(){
+    for(var i = 0; i<52; i++){
+      $(".container-fluid").append($('<div class="card fifty" style="display:inline-block; z-index: 2"></div>'));
+    }
+    // $('.fifty').bind('click', disappear);
+  });
+  
+  $('.fifty').click(function(){
+    $('.fifty').html('');
+  });
+  //disappear
+  // function disappear(){
+  //   $(".fifty").html('');
+  // }
 });
