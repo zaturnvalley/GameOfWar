@@ -25,6 +25,12 @@ h1{
   margin:10px;
   margin:0 auto;
 }
+#warButton{
+  position:absolute;
+  top:215px;
+  left:525px;
+  z-index: 104;
+}
 .card{
   border: 1px solid black;
   width:200px;
@@ -185,12 +191,18 @@ h1{
     font-size:14px;
     font-weight: 100;
 }
+.warText{
+    background-color: #F2E9D8;
+    border-radius:2%;
+    width:270px;
+    height:21px;
+}
 @media(max-width:1230px){
   body{
-  color:black;
-  font-family: "Bad Script", "Futura";
-  text-align:center;
-  background-color: #F2E9D8;
+    color:black;
+    font-family: "Bad Script", "Futura";
+    text-align:center;
+    background-color: #F2E9D8;
   }
   h1{
     margin:0 auto;
@@ -216,6 +228,12 @@ h1{
     margin:7.5px;
     margin:0 auto;
   }
+  #warButton{
+    position:absolute;
+    top:170px;
+    left:500px;
+    z-index: 104;
+    }
   .card{
     border: 1px solid black;
     width:150px;
@@ -308,159 +326,3 @@ h1{
       border:1px solid black;
       background-size: cover;
   }
-@media(max-width:1000px){
-  body{
-    color:black;
-    font-family: "Bad Script", "Futura";
-    text-align:center;
-    background-color: #F2E9D8;
-  }
-  h1{
-    margin:0 auto;
-    font-size:22px;
-  }
-  .container-fluid{
-    top:20px;
-    position:absolute;
-    z-index: 0;
-    width:1000px;
-    height:100px;
-  }
-  .spillContainer{
-    position:absolute;
-    height: 607.5px;
-    width: 607.5px;
-  }
-  #underline{
-    height:12.15px;
-    width:243px;
-  }
-  #infoBox{
-    margin:6px;
-    margin:0 auto;
-  }
-  .card{
-    border: 1px solid black;
-    width:121.5px;
-    height:173.75px;
-    margin: 0 auto;
-    border-radius:8%;
-    perspective: 750px;
-    background-size: cover;
-  }
-  .cardSmall{
-    border: 1px solid black;
-    width:45.56px;
-    height:86.87px;
-    margin: 0 auto;
-    border-radius:8%;
-  }
-  #war-row{
-    margin:0 auto;
-  }
-  .cardback{
-    background-image: url('../img/cardback.jpg');
-    background-size: cover;
-    margin: 0 auto;
-    z-index: 2;
-    transform: rotateY(0deg);
-  }
-  .back{
-    transform: rotateY(180deg);
-  }
-  .cardback, .back {
-    backface-visibility: hidden;
-  }
-  #player1{
-    position:relative;
-    width:121.5px;
-    height:173.75px;
-  }
-  #p1InPlayCard, #p2InPlayCard{
-    border: 1px solid black;
-    margin:0 auto;
-    width:121.5px;
-    height:173.75px;
-    background-size: cover;
-    border-radius:8%;
-    background-color:white;
-  }
-  .flipContainer{
-    transition: 0.05s;
-    transform-style: preserve-3d;
-    position: absolute;
-    top:0;
-    z-index: 101;
-    width:121.5px;
-    height:173.75px;
-    background-size: cover;
-  }
-  .flipContainer2{
-    transition: 0.05s;
-    transform-style: preserve-3d;
-    position: absolute;
-    top:0;
-    z-index: 101;
-    width:121.5px;
-    height:173.75px;
-    background-size: cover;
-  }
-  .row{
-    margin: 0 auto;
-    text-align:center;
-  }
-  #arrow{
-    width:60.75px;
-    height:21.26px;
-    margin:6.07px 0 0 0;
-  }
-  .signForArrow{
-    margin:30.37px 0 0 0;
-  }
-  .yours{
-      background-image: url('../img/cardback.jpg');
-      width:121.5px;
-      height:173.75px;
-      border:1px solid black;
-      background-size: cover;
-  }
-  .theirs{
-      background-image: url('../img/cardback.jpg');
-      width:121.5px;
-      height:173.75px;
-      border:1px solid black;
-      background-size: cover;
-  }
-@media(max-width:1000px){
-    .card {
-      width:100px;
-      height:143px;
-      margin: 0 auto;
-    }
-    #p1InPlayCard, #p2InPlayCard{
-      width:100px;
-      height:143px;
-      margin: 0 auto;
-    }
-    #info1, #info2{
-      width:150px;
-      height:214.5px;
-      margin: 0 auto;
-    }
-@media(max-width:700px){
-  .card {
-    width:80px;
-    height:114.4px;
-    margin: 0 auto;
-  }
-  #p1InPlayCard, #p2InPlayCard{
-    width:80px;
-    height:114.4px;
-    margin: 0 auto;
-  }
-  #info1, #info2{
-    width:150px;
-    height:214.5px;
-    margin: 0 auto;
-  }
-}
