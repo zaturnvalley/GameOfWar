@@ -47,7 +47,9 @@ $(document).ready(function() {
     if(checkForWinnerThenFlip()){
       return;
     }
+    setTimeout(function() {
     displayCard(yours, theirs, p1Play, p2Play, yourBounty, theirBounty);
+    }, 100)
     whoWinsThisRound();
   }
   //checks if there's a winner each turn, turn divys up cards
