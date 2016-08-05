@@ -38,10 +38,6 @@ $(document).ready(function() {
   });
   //turn function, checks winning scenario, calls round
   var clicker = function(){
-    if(p1Play % 7 === 0 || p2Play % 13 === 0){
-      $('.flipContainer').remove();
-      $('.flipContainer2').remove();
-    }
     //Winner scenario
     winnerScenario();
     round($('#p1InPlayCard')[0], $('#p2InPlayCard')[0]);
@@ -55,6 +51,10 @@ $(document).ready(function() {
     displayCard(yours, theirs, p1Play, p2Play, yourBounty, theirBounty);
     }, 200)
     whoWinsThisRound();
+    if(p1Play % 5 === 0){
+      $('.flipContainer').remove();
+      $('.flipContainer2').remove();
+    }
   }
   //checks if there's a winner each turn, turn divys up cards
   function checkForWinnerThenFlip(){
@@ -79,7 +79,7 @@ $(document).ready(function() {
     var flipContainer2 = $('<div style=" position:absolute; top:0;" class="flipContainer2 cardback card"></div>');
     var newCard2 = $('<div style="position: absolute; top:0" class="card back c' + p2Play + '"></div>');
     $('.flipContainer2').append(newCard2);
-    $('.flipContainer2').css({"transform": "rotateY(-180deg) translate(200px, 0px)", "transition": "0.6s", "transform-style": "preserve-3d"});
+    $('.flipContainer2').css({"transform": "rotateY(-180deg) translate(196px, 0px)", "transition": "0.6s", "transform-style": "preserve-3d"});
     $('.flipContainer2').addClass('c' + p2Play);
     $('#player2').append(flipContainer2);
     bounty.push(p1Play);
