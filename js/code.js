@@ -58,6 +58,8 @@ $(document).ready(function() {
   }
   //checks if there's a winner each turn, turn divys up cards
   function checkForWinnerThenFlip(){
+    $('#p1InPlayCard').removeClass('qCard');
+    $('#p2InPlayCard').removeClass('qCard');
     if(player1.length === 0){
       declareWinner("Player 2");
       return true;
