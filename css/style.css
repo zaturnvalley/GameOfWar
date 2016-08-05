@@ -169,6 +169,11 @@ h1{
   background-image: url('../img/royal/15.jpg');
   background-size: cover;
 }
+.qCard{
+  background-image: url('../img/qmark.jpg');
+  background-size: cover;
+  z-index: 200;
+}
 .player1Text{
     background-color: #549587;
     font-family: "Futura";

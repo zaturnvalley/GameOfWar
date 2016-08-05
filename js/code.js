@@ -148,6 +148,8 @@ $(document).ready(function() {
     var newButton = $('<button class=\'btn btn-danger\'>Clear Out War Cards</button>');
     newButton.bind('click', clearWarCards);
     $('#war-container').append(newButton);
+    $('#p1InPlayCard').addClass('qCard');
+    $('#p2InPlayCard').addClass('qCard');
   }
   //declare winners
   function declareWinner(playerThatWon){
